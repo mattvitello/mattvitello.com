@@ -18,16 +18,28 @@ $("#prints").click(function() {
 	changeBlock("#prints");
 });
 
+$("#earthsmart").click(function() {
+  changeBlock("#earthsmart");
+});
+
+$("#livpro").click(function() {
+  changeBlock("#livpro");
+});
+
 
 //switch between projects
 function changeBlock(id){
 	$("#roy-block").hide();
 	$("#ecnow-block").hide();
+  $("#earthsmart-block").hide();
+  $("#livpro-block").hide();
 	$("#desalination-block").hide();
 	$("#prints-block").hide();
 
 	$("#roy-li").removeClass("active");
 	$("#ecnow-li").removeClass("active");
+  $("#earthsmart-li").removeClass("active");
+  $("#livpro-li").removeClass("active");
 	$("#desalination-li").removeClass("active");
 	$("#prints-li").removeClass("active");
 
@@ -58,11 +70,13 @@ $("#v1").click(function() {
   $("#v1-block").show();
   $("#v3-block").hide();
   $("#v4-block").hide();
+  $("#v5-block").hide();
 
   $("#v2").removeClass("v-active");
   $("#v1").addClass("v-active");
   $("#v3").removeClass("v-active");
   $("#v4").removeClass("v-active");
+  $("#v5").removeClass("v-active");
 
   $("#text-blurb").show();
 
@@ -73,11 +87,13 @@ $("#v2").click(function() {
   $("#v2-block").show();
   $("#v3-block").hide();
   $("#v4-block").hide();
+  $("#v5-block").hide();
 
   $("#v1").removeClass("v-active");
   $("#v2").addClass("v-active");
   $("#v3").removeClass("v-active");
   $("#v4").removeClass("v-active");
+  $("#v5").removeClass("v-active");
 
   $("#text-blurb").show();
 });
@@ -87,11 +103,13 @@ $("#v3").click(function() {
   $("#v2-block").hide();
   $("#v3-block").show();
   $("#v4-block").hide();
+  $("#v5-block").hide();
 
   $("#v1").removeClass("v-active");
   $("#v2").removeClass("v-active");
   $("#v3").addClass("v-active");
   $("#v4").removeClass("v-active");
+  $("#v5").removeClass("v-active");
 
   $("#text-blurb").show();
 });
@@ -101,11 +119,29 @@ $("#v4").click(function() {
   $("#v2-block").hide();
   $("#v3-block").hide();
   $("#v4-block").show();
+  $("#v5-block").hide();
 
   $("#v1").removeClass("v-active");
   $("#v2").removeClass("v-active");
   $("#v3").removeClass("v-active");
   $("#v4").addClass("v-active");
+  $("#v5").removeClass("v-active");
+
+  $("#text-blurb").show();
+});
+
+$("#v5").click(function() {
+  $("#v1-block").hide();
+  $("#v2-block").hide();
+  $("#v3-block").hide();
+  $("#v4-block").hide();
+  $("#v5-block").show();
+
+  $("#v1").removeClass("v-active");
+  $("#v2").removeClass("v-active");
+  $("#v3").removeClass("v-active");
+  $("#v4").removeClass("v-active");
+  $("#v5").addClass("v-active");
 
   $("#text-blurb").hide();
 });
