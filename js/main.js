@@ -26,6 +26,10 @@ $("#livpro").click(function() {
   changeBlock("#livpro");
 });
 
+$("#grease").click(function() {
+  changeBlock("#grease");
+});
+
 
 //switch between projects
 function changeBlock(id){
@@ -35,6 +39,7 @@ function changeBlock(id){
   $("#livpro-block").hide();
 	$("#desalination-block").hide();
 	$("#prints-block").hide();
+  $("#grease-block").hide();
 
 	$("#roy-li").removeClass("active");
 	$("#ecnow-li").removeClass("active");
@@ -42,6 +47,7 @@ function changeBlock(id){
   $("#livpro-li").removeClass("active");
 	$("#desalination-li").removeClass("active");
 	$("#prints-li").removeClass("active");
+  $("#grease-li").removeClass("active");
 
 	var block = id + "-block";
 	var li = id + "-li";
