@@ -30,6 +30,10 @@ $("#grease").click(function() {
   changeBlock("#grease");
 });
 
+$("#pathway").click(function() {
+  changeBlock("#pathway");
+});
+
 
 //switch between projects
 function changeBlock(id){
@@ -40,6 +44,7 @@ function changeBlock(id){
 	$("#desalination-block").hide();
 	$("#prints-block").hide();
   $("#grease-block").hide();
+  $("#pathway-block").hide();
 
 	$("#roy-li").removeClass("active");
 	$("#ecnow-li").removeClass("active");
@@ -48,6 +53,7 @@ function changeBlock(id){
 	$("#desalination-li").removeClass("active");
 	$("#prints-li").removeClass("active");
   $("#grease-li").removeClass("active");
+  $("#pathway-li").removeClass("active");
 
 	var block = id + "-block";
 	var li = id + "-li";
@@ -72,86 +78,77 @@ $(window).on( 'scroll', function(){
 
 //select roy blair project version
 $("#v1").click(function() {
-  $("#v2-block").hide();
-  $("#v1-block").show();
-  $("#v3-block").hide();
-  $("#v4-block").hide();
-  $("#v5-block").hide();
-
-  $("#v2").removeClass("v-active");
-  $("#v1").addClass("v-active");
-  $("#v3").removeClass("v-active");
-  $("#v4").removeClass("v-active");
-  $("#v5").removeClass("v-active");
-
+  changeVersion("#v1");
   $("#text-blurb").show();
-
 });
 
 $("#v2").click(function() {
-  $("#v1-block").hide();
-  $("#v2-block").show();
-  $("#v3-block").hide();
-  $("#v4-block").hide();
-  $("#v5-block").hide();
-
-  $("#v1").removeClass("v-active");
-  $("#v2").addClass("v-active");
-  $("#v3").removeClass("v-active");
-  $("#v4").removeClass("v-active");
-  $("#v5").removeClass("v-active");
-
+  changeVersion("#v2");
   $("#text-blurb").show();
 });
 
 $("#v3").click(function() {
-  $("#v1-block").hide();
-  $("#v2-block").hide();
-  $("#v3-block").show();
-  $("#v4-block").hide();
-  $("#v5-block").hide();
-
-  $("#v1").removeClass("v-active");
-  $("#v2").removeClass("v-active");
-  $("#v3").addClass("v-active");
-  $("#v4").removeClass("v-active");
-  $("#v5").removeClass("v-active");
-
+  changeVersion("#v3");
   $("#text-blurb").show();
 });
 
 $("#v4").click(function() {
-  $("#v1-block").hide();
-  $("#v2-block").hide();
-  $("#v3-block").hide();
-  $("#v4-block").show();
-  $("#v5-block").hide();
-
-  $("#v1").removeClass("v-active");
-  $("#v2").removeClass("v-active");
-  $("#v3").removeClass("v-active");
-  $("#v4").addClass("v-active");
-  $("#v5").removeClass("v-active");
-
+  changeVersion("#v4");
   $("#text-blurb").show();
 });
 
 $("#v5").click(function() {
-  $("#v1-block").hide();
-  $("#v2-block").hide();
-  $("#v3-block").hide();
-  $("#v4-block").hide();
-  $("#v5-block").show();
+  changeVersion("#v5");
+  $("#text-blurb").show();
+});
 
-  $("#v1").removeClass("v-active");
-  $("#v2").removeClass("v-active");
-  $("#v3").removeClass("v-active");
-  $("#v4").removeClass("v-active");
-  $("#v5").addClass("v-active");
-
+$("#v6").click(function() {
+  changeVersion("#v6");
   $("#text-blurb").hide();
 });
 
+function changeVersion(id){
+  $("#v2-block").hide();
+  $("#v1-block").hide();
+  $("#v3-block").hide();
+  $("#v4-block").hide();
+  $("#v5-block").hide();
+  $("#v6-block").hide();
+
+  $("#v2").removeClass("v-active");
+  $("#v1").removeClass("v-active");
+  $("#v3").removeClass("v-active");
+  $("#v4").removeClass("v-active");
+  $("#v5").removeClass("v-active");
+  $("#v6").removeClass("v-active");
+
+  var block = id + "-block";
+  $(block).show();
+  $(id).addClass("v-active");
+}
+
+/*grease version */
+$("#grease-v1").click(function() {
+  changeGreaseVersion("#grease-v1");
+  $("#grease-text-blurb").show();
+});
+
+$("#grease-v2").click(function() {
+  changeGreaseVersion("#grease-v2");
+  $("#grease-text-blurb").hide();
+});
+
+function changeGreaseVersion(id){
+  $("#grease-v2-block").hide();
+  $("#grease-v1-block").hide();
+
+  $("#grease-v2").removeClass("v-active");
+  $("#grease-v1").removeClass("v-active");
+
+  var block = id + "-block";
+  $(block).show();
+  $(id).addClass("v-active");
+}
 
 //change image on homepage
 function changeImage() {
@@ -170,6 +167,64 @@ function changeImage() {
     }, 100);
   });
 }
+
+
+/*tech specs*/
+$(".grease-tech-specs").click(function() {
+  $(".grease-tech-specs").hide();
+  $(".grease-tech-specs-show").show();
+});
+$(".grease-tech-specs-show").click(function() {
+  $(".grease-tech-specs").show();
+  $(".grease-tech-specs-show").hide();
+});
+
+$(".roy-tech-specs").click(function() {
+  $(".roy-tech-specs").hide();
+  $(".roy-tech-specs-show").show();
+});
+$(".roy-tech-specs-show").click(function() {
+  $(".roy-tech-specs").show();
+  $(".roy-tech-specs-show").hide();
+});
+
+$(".pathway-tech-specs").click(function() {
+  $(".pathway-tech-specs").hide();
+  $(".pathway-tech-specs-show").show();
+});
+$(".pathway-tech-specs-show").click(function() {
+  $(".pathway-tech-specs").show();
+  $(".pathway-tech-specs-show").hide();
+});
+
+$(".ecnow-tech-specs").click(function() {
+  $(".ecnow-tech-specs").hide();
+  $(".ecnow-tech-specs-show").show();
+});
+$(".ecnow-tech-specs-show").click(function() {
+  $(".ecnow-tech-specs").show();
+  $(".ecnow-tech-specs-show").hide();
+});
+
+$(".earthsmart-tech-specs").click(function() {
+  $(".earthsmart-tech-specs").hide();
+  $(".earthsmart-tech-specs-show").show();
+});
+$(".earthsmart-tech-specs-show").click(function() {
+  $(".earthsmart-tech-specs").show();
+  $(".earthsmart-tech-specs-show").hide();
+});
+
+$(".livpro-tech-specs").click(function() {
+  $(".livpro-tech-specs").hide();
+  $(".livpro-tech-specs-show").show();
+});
+$(".livpro-tech-specs-show").click(function() {
+  $(".livpro-tech-specs").show();
+  $(".livpro-tech-specs-show").hide();
+});
+
+
 
 
 changeImage();
