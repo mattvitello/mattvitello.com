@@ -152,7 +152,7 @@ function changeGreaseVersion(id){
 
 //change image on homepage
 function changeImage() {
-  var images = ['#img1', '#img2', '#img3', '#img4', '#img5', '#img6'];
+  var images = ['#img1', '#img2', '#img7', '#img4', '#img5', '#img6', '#img3', '#img8'];
   $(document).mousemove(function (e) {
     var item = $('.slider>div.show');
     var index = images.indexOf('#' + $(item).attr('id'));

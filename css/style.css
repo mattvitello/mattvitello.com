@@ -185,7 +185,7 @@ a:hover{
     #text-blurb, #grease-text-blurb{
         font-size:5px;
     }
-    #img1 img, #img2 img, #img3 img, #img4 img, #img5 img, #img6 img{
+    #img1 img, #img2 img, #img3 img, #img4 img, #img5 img, #img6 img, #img7 img, #img8 img{
         width: 70%;
     }
 }
@@ -211,7 +211,7 @@ a:hover{
     #text-blurb, #grease-text-blurb{
         font-size:12px;
     }
-    #img1 img, #img2 img, #img3 img, #img4 img, #img5 img, #img6 img{
+    #img1 img, #img2 img, #img3 img, #img4 img, #img5 img, #img6 img, #img7 img, #img8 img{
         width: inherit;
     }
 
@@ -238,7 +238,7 @@ a:hover{
     #top{
         padding-top:0px;
         position: fixed;
-        right:0; 
+        right:0;
         padding-right:60px;
     }
 
@@ -279,6 +279,12 @@ a:hover{
 #img6{
     padding-bottom: 58px;
 }
+#img7{
+    padding-right: 24px;
+}
+#img8 {
+    padding-left: 16px;
+}
 
 #no-hover:hover{
     background: transparent;
@@ -304,6 +310,3 @@ a:hover{
   width: 100%;
   height: 74.3%;
 }
-
-
-
