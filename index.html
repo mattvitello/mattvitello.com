@@ -12,11 +12,11 @@
   <meta property="og:description" content="matt vitello fan club"/>
 
   <title>MATT VITELLO</title>
-
-  <link rel="icon" href="img/spiral.ico" type="image/x-icon">
+  <base href="/">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.css">
   <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/ekko-lightbox.css">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108381604-2"></script>
@@ -26,58 +26,29 @@
     gtag('js', new Date());
     gtag('config', 'UA-108381604-2');
   </script>
-
   <script>
-    function preloader()
-    {
-      heavyImage = new Image();
-      heavyImage.src = "img/roy/2.png";
-
-      heavyImage2 = new Image();
-      heavyImage2.src = "img/roy/4.png";
-    }
+    (function(){
+      var redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirect && redirect != location.href) {
+        history.replaceState(null, null, redirect);
+      }
+    })();
   </script>
-</head>
+<link rel="stylesheet" href="styles.30972b7c450451524f77.css"></head>
+<body>
 
-<body onLoad="javascript:preloader()">
+  <app-root></app-root>
 
-  <div class="container-fluid h-100">
-    <div class ="row outer-top-nav">
-      <div id="name" class="col-md-2 col-sm-12">
-        <p id="title"><a href="" style="background: transparent;">MATT VITELLO</a></p>
-      </div>
-      <div id="top-buffer" class="col-md-10"></div>
-      <div id="top" class="col-md-10 col-sm-12">
-       <ul class="top-nav">
-        <li class="t-item"><a href="/projects">PROJECTS</a></li>
-        <li class="t-item"><a href="/photo">PHOTO</a></li>
-        <li class="t-item"><a href="/contact">CONTACT</a></li>
-        <li class="t-item" style="margin-right:0px;"><a href="https://github.com/mattvitello">GITHUB</a></li>
-        <!--<li class="t-item" style="margin-right:0px;"><a href="Resume-Vitello.pdf">RESUME</a></li>-->
-      </ul>
-    </div>
-  </div>
-
-  <div class = "row h-100 justify-content-center" style="height: 80% !important">
-    <div class="col-12 align-self-center slider" style="text-align: center">
-      <div id="img1" class="show"><img src="img/home/trees.png"></div>
-      <div id="img2" class="hide"><img src="img/home/pizza.png"></div>
-      <div id="img3" class="hide"><img src="img/home/camera.png"></div>
-      <div id="img4" class="hide"><img src="img/home/mke.png"></div>
-      <div id="img5" class="hide"><img src="img/home/enchantments.png"></div>
-      <div id="img6" class="hide"><img src="img/home/lighthouse.png"></div>
-      <div id="img7" class="hide"><img src="img/home/boat.png"></div>
-      <div id="img8" class="hide"><img src="img/home/hands.png"></div>
-
-    </div>
-  </div>
-</div>
-
-<!--Javascript-->
-<script src="js/tag.js"></script>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-<script src="js/main.js"></script>
-</body>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  <script>
+    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+      event.preventDefault();
+      $(this).ekkoLightbox();
+    });
+  </script>
+  <script src="assets/js/ekko-lightbox.min.js"></script>
+<script type="text/javascript" src="runtime.a66f828dca56eeb90e02.js"></script><script type="text/javascript" src="polyfills.0e3ee22c9a47318954a0.js"></script><script type="text/javascript" src="main.7fbc6e20a5877b29a5fc.js"></script></body>
 </html>
