@@ -46,7 +46,23 @@
   <script>
     $(document).on('click', '[data-toggle="lightbox"]', function(event) {
       event.preventDefault();
-      $(this).ekkoLightbox();
+      $(this).ekkoLightbox({
+       type: 'image',
+       onContentLoaded: function() {
+         var imgh = $(".ekko-lightbox-container").find("img").height();
+         var imgw = $(".ekko-lightbox-container").find("img").width();
+         var winh = $(window).height();
+         var winw = $(window).width();
+         if ((imgh+200)>winh && (imgw+200)>winw)
+         {
+           $(".ekko-lightbox-container").find("img").css("height",winh-150).css("width","auto");
+           $(".ekko-lightbox-container").css("height",winh-150);
+           var newWidth = $(".ekko-lightbox-container").find("img").width();
+           $(".modal-dialog").css("max-width", newWidth);
+         }
+        }
+      }
+      );
     });
   </script>
   <script src="assets/js/ekko-lightbox.min.js"></script>
