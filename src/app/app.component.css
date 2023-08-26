@@ -1,0 +1,129 @@
+/* top nav */
+.active-link{
+  text-decoration: underline;
+}
+.top-nav{
+    opacity: 1;
+    display: block;
+    -webkit-transition: opacity .5s cubic-bezier(.215,.61,.355,1),-webkit-transform .5s cubic-bezier(.215,.61,.355,1);
+    transition: opacity .5s cubic-bezier(.215,.61,.355,1),-webkit-transform .5s cubic-bezier(.215,.61,.355,1);
+    transition: opacity .5s cubic-bezier(.215,.61,.355,1),transform .5s cubic-bezier(.215,.61,.355,1);
+    transition: opacity .5s cubic-bezier(.215,.61,.355,1),transform .5s cubic-bezier(.215,.61,.355,1),-webkit-transform .5s cubic-bezier(.215,.61,.355,1);
+}
+
+.top-nav li{
+    display: inline;
+}
+
+.nav-item{
+    margin-right:45px;
+    font-size: 14px;
+    font-family: monospace;
+}
+
+#title{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.active{
+    text-decoration: line-through;
+    font-weight: bold;
+}
+
+.fade-up{
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    transform: translateY(-20px);
+}
+
+.t-item{
+    font-size: 14px;
+    padding-bottom: 15px;
+    cursor: pointer;
+    /*font-family: monospace;*/
+}
+
+#name .logo-img{
+  width: 88px;
+  margin-top: -20px;
+}
+
+
+
+/* Mobile resizing */
+@media (min-width: 0px){
+    #name{
+        position: relative;
+    }
+    #name p{
+        text-align: center;
+    }
+    #top{
+        position: relative;
+        padding-top:20px;
+    }
+    #top-buffer{
+        display: none;
+    }
+    .top-nav{
+        padding: 0;
+        text-align: center;
+        float: none;
+    }
+    .outer-top-nav{
+        padding-bottom:5px;
+    }
+    .container-fluid{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .top-nav li {
+        margin-right: 30px;
+        font-size: 10px;
+    }
+}
+@media (min-width: 350px){
+    .top-nav li {
+        margin-right: 36px;
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 600px){
+    .top-nav li {
+        margin-right: 45px;
+        font-size: 14px;
+    }
+    .container-fluid{
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+}
+
+@media (min-width: 768px){
+    #name{
+        position: fixed;
+    }
+    #name p{
+        text-align: inherit;
+    }
+    #top{
+        padding-top:0px;
+        position: fixed;
+        right:0;
+        padding-right:60px;
+    }
+    #top-buffer{
+        display: block;
+    }
+    .top-nav{
+        padding: inherit;
+        text-align: inherit;
+        float: right;
+    }
+    .outer-top-nav{
+        padding-bottom:40px;
+    }
+}

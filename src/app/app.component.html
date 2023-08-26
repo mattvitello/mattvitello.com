@@ -1,0 +1,21 @@
+<div class="container-fluid h-100">
+  <div class ="row outer-top-nav">
+    <div id="name" class="col-md-3 col-sm-12">
+      <p id="title"><a style="background: transparent;">
+        <img src="/assets/img/my-logo.png" class="logo-img"/>
+      </a></p>
+
+    </div>
+    <div id="top-buffer" class="col-md-9"></div>
+    <div id="top" class="col-md-9 col-sm-12">
+      <ul class="top-nav">
+        <li class="t-item"><a class="projects-tab" href="" [routerLink]="['/projects']" routerLinkActive="active-link">PROJECTS</a></li>
+        <li class="t-item"><a class="photo-tab" href="" [routerLink]="['/photo']" routerLinkActive="active-link">PHOTO</a></li>
+        <li class="t-item"><a class="photo-tab" href="" [routerLink]="['/whatisthis']" routerLinkActive="active-link">???</a></li>
+        <li class="t-item"><a class="contact-tab" href="" [routerLink]="['/contact']" routerLinkActive="active-link">CONTACT</a></li>
+        <li class="t-item" style="margin-right:0px;"><a target="_blank" href="https://github.com/mattvitello">CODE</a></li>
+      </ul>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</div>

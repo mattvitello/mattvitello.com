@@ -1,0 +1,42 @@
+<div class="row" id="projects-page">
+  <div id="project-sidebar-buffer" class="col-lg-2 col-md-3 col-sm-12"></div>
+  <div id="project-sidebar" class="col-lg-2 col-md-2 col-sm-12 order-2">
+    <ul id="project-nav">
+      <li class="p-item active"><a id="roy" (click)="changeProject($event, 0)">Roy Blair</a></li>
+      <li class="p-item"><a id="atom" (click)="changeProject($event, 1)">Atom</a></li>
+      <li class="p-item"><a id="grease" (click)="changeProject($event, 2)">Grease</a></li>
+      <li class="p-item"><a id="pathway" (click)="changeProject($event, 3)">Pathway Biotechnology</a></li>
+      <li class="p-item"><a id="earthsmart" (click)="changeProject($event, 4)">Earthsmart P&D</a></li>
+      <li class="p-item"><a id="ecnow" (click)="changeProject($event, 5)">EcNow Tech</a></li>
+      <li class="p-item"><a id="livpro" (click)="changeProject($event, 6)">LivProactiv</a></li>
+      <li class="p-item"><a id="desalination" (click)="changeProject($event, 7)">Desalination</a></li>
+    </ul>
+  </div>
+  <div class="col-md-9 col-sm-12 order-1" style="margin-top:25px;">
+    <div class="{{currentProject.title}}-block">
+      <p id="p-title">
+        {{currentProject.title}}
+        <a style="background: transparent; padding-right: 15px;" target="_blank" href="{{currentProjectVersion.link}}" *ngIf="currentProject.isLive">
+          <i style="font-size: 15px;padding-left: 5px;" class="fa fa-external-link" aria-hidden="true"></i>
+        </a>
+        <a id="text-blurb" style="background: #f4cbcc !important" *ngIf="currentProjectVersion.latestMessage.length > 0">{{currentProjectVersion.latestMessage}}</a>
+      </p>
+      <div id="version" style="display: inline-flex;font-size: 13px;" *ngIf="currentProject.versions.length > 1">
+        <p *ngFor="let version of currentProject.versions"
+          id="{{currentProject.title}}-{{version.versionNum}}"
+          style="margin-left:6px;"
+          [ngClass]="{'v-active': version.versionNum == currentProjectVersion.versionNum}">
+          <a style="cursor: pointer;" (click)="changeVersion(version.versionNum)">v{{version.versionNum}}</a>
+        </p>
+      </div>
+      <div id="project-block">
+        <p class="content" [innerHTML]="currentProjectVersion.description"></p>
+        <p class="grease-tech-specs tech-specs" (click)="showTechSpecs()" *ngIf="currentProjectVersion.techSpecs.length > 0"><span>+</span> tech specs</p>
+        <p class="grease-tech-specs-show tech-specs-show" (click)="hideTechSpecs()" *ngIf="currentProjectVersion.techSpecs.length > 0"><span>-</span> {{currentProjectVersion.techSpecs}}</p>
+        <img *ngFor="let img of currentProjectVersion.images"
+          class="col-{{img.width}} project-img"
+          src="{{img.url}}"/>
+      </div>
+    </div>
+  </div>
+</div>

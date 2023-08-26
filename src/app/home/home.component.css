@@ -1,0 +1,43 @@
+/* Home page */
+.hide{
+    display: none;
+}
+#img1{
+    padding-right: 16px;
+    padding-bottom:80px;
+}
+#img2{
+    padding-left: 3px;
+    padding-bottom: 14px;
+}
+#img3{
+    padding-left: 12px;
+}
+#img4{
+    padding-left: 12px;
+}
+#img5{
+    padding-bottom:18px;
+}
+#img6{
+    padding-bottom: 58px;
+}
+#img7{
+    padding-right: 24px;
+}
+#img8 {
+    padding-left: 16px;
+}
+
+#no-hover:hover{
+    background: transparent;
+}
+
+
+@media(max-width:450px){
+  .slider{
+    transform: scale(0.7);
+    flex: 0 0 140%;
+    max-width: 140%;  
+  }
+}
