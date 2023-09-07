@@ -69,6 +69,7 @@
     }
     .top-nav{
         padding: 0;
+        text-align: center;
         float: none;
     }
     .outer-top-nav{
@@ -79,23 +80,26 @@
         padding-left: 15px;
     }
     .top-nav li {
-        margin-right: 30px;
-        font-size: 10px;
+        margin-right: 20px;
+        font-size: 9px;
+    }
+    .fa-github {
+        font-size: 11px;
+    }
+}
+@media (min-width: 370px){
+    .top-nav li {
+        margin-right: 21px;
+        font-size: 11px;
     }
     .fa-github {
         font-size: 13px;
     }
 }
-@media (min-width: 350px){
-    .top-nav li {
-        margin-right: 36px;
-        font-size: 12px;
-    }
-}
 
 @media (min-width: 600px){
     .top-nav li {
-        margin-right: 45px;
+        margin-right: 26px;
         font-size: 14px;
     }
     .container-fluid{
@@ -129,6 +133,13 @@
         padding-bottom:40px;
     }
     .fa-github {
-        font-size: 18px;
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 900px){
+    .top-nav li {
+        margin-right: 45px;
+        font-size: 14px;
     }
 }
