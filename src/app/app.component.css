@@ -69,7 +69,6 @@
     }
     .top-nav{
         padding: 0;
-        text-align: center;
         float: none;
     }
     .outer-top-nav{
@@ -82,6 +81,9 @@
     .top-nav li {
         margin-right: 30px;
         font-size: 10px;
+    }
+    .fa-github {
+        font-size: 13px;
     }
 }
 @media (min-width: 350px){
@@ -125,5 +127,8 @@
     }
     .outer-top-nav{
         padding-bottom:40px;
+    }
+    .fa-github {
+        font-size: 18px;
     }
 }
